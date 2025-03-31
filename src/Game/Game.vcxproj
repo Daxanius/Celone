@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{f3ef6266-4fe5-43bd-bedc-45ee7cf155e0}</ProjectGuid>
+    <RootNamespace>Game</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)\Libraries\SDLTtf\SDL2_ttf-2.20.2\include;$(SolutionDir)\Libraries\SDLMixer\SDL2_mixer-2.6.3\include;$(SolutionDir)\Libraries\SDLImage\SDL2_image-2.6.3\include;$(SolutionDir)\Libraries\SDLMain\SDL2-2.26.3\include;$(SolutionDir)\Engine;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\x64\Debug;$(SolutionDir)\Libraries\SDLTtf\SDL2_ttf-2.20.2\lib\x64;$(SolutionDir)\Libraries\SDLMixer\SDL2_mixer-2.6.3\lib\x64;$(SolutionDir)\Libraries\SDLImage\SDL2_image-2.6.3\lib\x64;$(SolutionDir)\Libraries\SDLMain\SDL2-2.26.3\lib\x64;$(LibraryPath)</LibraryPath>
+    <CustomBuildAfterTargets>BuildCompile</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+      <Message>Copying dll files to executable</Message>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>xcopy "$(SolutionDir)Libraries\SDLMain\SDL2-2.26.3\lib\x64\*.dll" "$(TargetDir)" /y /d
+xcopy "$(SolutionDir)Libraries\SDLImage\SDL2_image-2.6.3\lib\x64\*.dll" "$(TargetDir)" /y /d
+xcopy "$(SolutionDir)Libraries\SDLMixer\SDL2_mixer-2.6.3\lib\x64\*.dll" "$(TargetDir)" /y /d
+xcopy "$(SolutionDir)Libraries\SDLTtf\SDL2_ttf-2.20.2\lib\x64\*.dll" "$(TargetDir)" /y /d
+xcopy "$(SolutionDir)Resources\*.*" "$(TargetDir)" /y /d /s</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(SolutionDir)Libraries\SDLMain\SDL2-2.26.3\lib\x64\*.dll" "$(TargetDir)" /y /d</Command>
+    </PostBuildEvent>
+    <CustomBuildStep>
+      <Message>Copying dll files to executable</Message>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AlgoUtils.cpp" />
+    <ClCompile Include="BackgroundTool.cpp" />
+    <ClCompile Include="BinaryStream.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CameraTool.cpp" />
+    <ClCompile Include="Cassette.cpp" />
+    <ClCompile Include="CircleShape.cpp" />
+    <ClCompile Include="CrumbleBlock.cpp" />
+    <ClCompile Include="DashRefill.cpp" />
+    <ClCompile Include="DeathZoneTool.cpp" />
+    <ClCompile Include="Decal.cpp" />
+    <ClCompile Include="EditTool.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Jumpthru.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="CassetteAreaTool.cpp" />
+    <ClCompile Include="NoteBlock.cpp" />
+    <ClCompile Include="ObjectBlueprint.cpp" />
+    <ClCompile Include="ObjectFactory.cpp" />
+    <ClCompile Include="ObjectManager.cpp" />
+    <ClCompile Include="ObjectTool.cpp" />
+    <ClCompile Include="ParallaxBackground.cpp" />
+    <ClCompile Include="PlayingScreen.cpp" />
+    <ClCompile Include="RectangleTool.cpp" />
+    <ClCompile Include="CheckPoint.cpp" />
+    <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="EditorScreen.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Hair.cpp" />
+    <ClCompile Include="Joint.cpp" />
+    <ClCompile Include="Limb.cpp" />
+    <ClCompile Include="LoadingScreen.cpp" />
+    <ClCompile Include="MathUtils.cpp" />
+    <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="ParticleEmitter.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="RectangleShape.cpp" />
+    <ClCompile Include="ScreenManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MenuScreen.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Spike.cpp" />
+    <ClCompile Include="Spring.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="Strawberry.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="ResourceUtils.cpp" />
+    <ClCompile Include="Tilemap.cpp" />
+    <ClCompile Include="TilemapTool.cpp" />
+    <ClCompile Include="TrafficLight.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AlgoUtils.h" />
+    <ClInclude Include="BackgroundTool.h" />
+    <ClInclude Include="BinaryStream.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="CameraTool.h" />
+    <ClInclude Include="Cassette.h" />
+    <ClInclude Include="CircleShape.h" />
+    <ClInclude Include="CrumbleBlock.h" />
+    <ClInclude Include="DashRefill.h" />
+    <ClInclude Include="DeathZoneTool.h" />
+    <ClInclude Include="Decal.h" />
+    <ClInclude Include="EditTool.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="Jumpthru.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="CassetteAreaTool.h" />
+    <ClInclude Include="NoteBlock.h" />
+    <ClInclude Include="ObjectBlueprint.h" />
+    <ClInclude Include="ObjectFactory.h" />
+    <ClInclude Include="ObjectManager.h" />
+    <ClInclude Include="ObjectTool.h" />
+    <ClInclude Include="ParallaxBackground.h" />
+    <ClInclude Include="PlayingScreen.h" />
+    <ClInclude Include="RectangleTool.h" />
+    <ClInclude Include="CheckPoint.h" />
+    <ClInclude Include="Shape.h" />
+    <ClInclude Include="EditorScreen.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameDefines.h" />
+    <ClInclude Include="Hair.h" />
+    <ClInclude Include="Joint.h" />
+    <ClInclude Include="Limb.h" />
+    <ClInclude Include="LoadingScreen.h" />
+    <ClInclude Include="MathUtils.h" />
+    <ClInclude Include="Particle.h" />
+    <ClInclude Include="ParticleEmitter.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="RectangleShape.h" />
+    <ClInclude Include="ScreenManager.h" />
+    <ClInclude Include="MenuScreen.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Spike.h" />
+    <ClInclude Include="Spring.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="Strawberry.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="ResourceUtils.h" />
+    <ClInclude Include="Tilemap.h" />
+    <ClInclude Include="TilemapTool.h" />
+    <ClInclude Include="TrafficLight.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Engine\Engine.vcxproj">
+      <Project>{5adab721-cb6c-4ef5-89eb-20ec51a13cfc}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <PropertyGroup>
+    <LocalDebuggerWorkingDirectory>$(TargetDir)</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)\Libraries\SDLTtf\SDL2_ttf-2.20.2\include;$(SolutionDir)\Libraries\SDLMixer\SDL2_mixer-2.6.3\include;$(SolutionDir)\Libraries\SDLImage\SDL2_image-2.6.3\include;$(SolutionDir)\Libraries\SDLMain\SDL2-2.26.3\include;$(SolutionDir)\Engine;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\x64\Debug;$(SolutionDir)\Libraries\SDLTtf\SDL2_ttf-2.20.2\lib\x64;$(SolutionDir)\Libraries\SDLMixer\SDL2_mixer-2.6.3\lib\x64;$(SolutionDir)\Libraries\SDLImage\SDL2_image-2.6.3\lib\x64;$(SolutionDir)\Libraries\SDLMain\SDL2-2.26.3\lib\x64;$(LibraryPath)</LibraryPath>
+    <CustomBuildAfterTargets>BuildCompile</CustomBuildAfterTargets>
+    <CustomBuildBeforeTargets />
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+</Project>
